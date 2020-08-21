@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import '../home/styles.css';
 import Heroh from '../img/mentorhero.png'
-import Nav from '../../navigation/nav/nav'
 import Footer from '../../navigation/footer/footer'
 
 // mentors 
@@ -38,7 +37,6 @@ export default class mentor extends Component {
     render() {
         return (
             <div>
-            <Nav/>
 
               <div class="card carddy text-white position-relative" >
           <img class="card-img img-fluid" src={Heroh} alt="images" style={{height:'60vh'}}></img>

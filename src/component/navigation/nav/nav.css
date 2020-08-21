@@ -134,6 +134,7 @@
 /* nav link  */
 .link {
   position: relative;
+  text-decoration: none!important;
 }
 .link:after, .link:after {
   bottom: -4px!important;
@@ -150,4 +151,5 @@
 .link:hover:after, .link:hover:after {
   width: 100%!important;
   opacity: 0.9!important;
+  color:#1A9988!important;
 }

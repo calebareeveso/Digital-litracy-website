@@ -1,5 +1,4 @@
 import React , { Component } from 'react';
-import Nav from '../../navigation/nav/nav'
 import Footer from '../../navigation/footer/footer'
 import Hero from '../../pages/img/hero.png'
 import Mentor from '../../pages/img/mentor.png'
@@ -58,7 +57,6 @@ class Home extends Component {
     
   return (
     <div>
-      <Nav/>
    
      <main>
 

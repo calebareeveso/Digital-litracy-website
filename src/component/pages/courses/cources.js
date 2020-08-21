@@ -6,7 +6,6 @@ import C2 from '../../pages/img/c2.png'
 import C3 from '../../pages/img/c3.png'
 import C4 from '../../pages/img/c4.png'
 import Star from "../../pages/img/star.svg";
-import Nav from '../../navigation/nav/nav'
 import Footer from '../../navigation/footer/footer'
 
 import Hero from '../img/chero.png'
@@ -14,7 +13,6 @@ class cources extends Component {
     render() {
         return (
             <div>
-                <Nav />
                 <div class="card carddy text-white position-relative" >
                     <img class="card-img img-fluid" src={Hero} alt="images" style={{height:'60vh'}}></img>
                     <div class="card-img-overlay" >

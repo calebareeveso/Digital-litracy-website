@@ -1,7 +1,6 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
-    Switch,
+     Link
   } from "react-router-dom";
   import { Navbar,Nav } from 'react-bootstrap'
   import './nav.css'
@@ -36,7 +35,8 @@ class BootstrapNavbar extends React.Component{
             <div className='xHidden'>
                 <div className="row">
                     <div className="col-md-12">
-                        <Router>
+                        
+
                             <Navbar  expand="md" sticky="top" className='navwidth' style={{backgrounColor: "#ffffff"}}>
                                 <Navbar.Brand href="/" className='noOutline'><img src={Logo} alt='' className="nlogo"></img></Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" >  
@@ -48,10 +48,11 @@ class BootstrapNavbar extends React.Component{
                                 </Navbar.Toggle>
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="ml-auto">
-                                    <Nav.Link href="/" ><span className='green ro link'>Home</span></Nav.Link>
-                                    <Nav.Link href="/courses"><span className='green ro link'>Courses</span></Nav.Link>
-                                    <Nav.Link href="/mentors"><span className='green ro link'>Mentors</span></Nav.Link>
-                                    <Nav.Link href="/contact"><span className='green ro link'>Contact Us</span></Nav.Link>
+                                   
+                                    <Nav.Link  ><span > <Link to='/' className='green ro link'>Home</Link></span></Nav.Link>
+                                    <Nav.Link ><span> <Link to='/courses' className='green ro link'>Courses</Link></span></Nav.Link>
+                                    <Nav.Link ><span ><Link to='/mentors' className='green ro link'>Mentors</Link></span></Nav.Link>
+                                    <Nav.Link ><span ><Link to='/contact' className='green ro link'>Contact Us</Link></span></Nav.Link>
                                     <Nav.Link href="#" style={GreenButton}><span className="ro" onClick={() => this.navopen()}>JOIN THE CLASSROOM</span></Nav.Link>
 
                                    
@@ -63,10 +64,8 @@ class BootstrapNavbar extends React.Component{
                                 </Navbar.Collapse>
                             </Navbar>
                             <br />
-                            <Switch>
                             
-                            </Switch>
-                        </Router>
+                           
                     </div>
                 </div>
               

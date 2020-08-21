@@ -1,6 +1,5 @@
 import React from 'react';
 import '../home/styles.css';
-import Nav from '../../navigation/nav/nav'
 import Footer from '../../navigation/footer/footer'
 import Twitter from '../../pages/img/twitter.svg'
 import Facebook from '../../pages/img/facebook.svg'
@@ -10,7 +9,6 @@ import Slack from '../../pages/img/slack.svg'
 function Contact() {
   return (
     <div className="App">
-      <Nav/>
       <div >
        <div className=''>
        <h1 className=" ru  pt-sm-5 pt-3 hero-h fw2 green text-center ">CONTACT</h1>
