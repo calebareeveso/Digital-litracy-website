@@ -7,29 +7,42 @@ import C3 from '../../pages/img/c3.png'
 import C4 from '../../pages/img/c4.png'
 import Star from "../../pages/img/star.svg";
 import Footer from '../../navigation/footer/footer'
+// import text from '../../../api/text.json'
 
 import Hero from '../img/chero.png'
-class cources extends Component {
+import AuthBaby from './authBaby'
+class authcources extends Component {
+    componentDidMount(){
+        // fetch('../../../api/text.json')
+        // .then((res) => res.json())
+        // .then((data) => {
+        //     console.log(data)
+        // })
+    }
+
+  
     render() {
+        
         return (
             <div>
                 <div class="card carddy text-white position-relative" >
                     <img class="card-img img-fluid" className='heroh' src={Hero} alt="images" style={{height:'60vh'}}></img>
                     <div class="card-img-overlay" >
                         <div className='container pt-5 d-flex justify-content-center align-items-center ' style={{height:'80%'}}>
-                        <h1 className=" ru pl-sm-4 pt-sm-4 hero-h white">Your Courses</h1>
+                        <h1 className=" ru pl-sm-4 pt-sm-4 hero-h white">Welcome :)</h1>
                         </div>
                     </div>
                     </div>
                     <div  className="jumbotron " style={{backgroundColor: "#fff"}}>
+                        <AuthBaby/>
                 <div className='container pt-3'>
                 <div className='row'>
                 {/* col 1 */}
                 <div className='col-md-6 col-lg-4'>
                 <div class="card mb-2 mb-sm-0 mywidth" style={{width: "18rem"}}>
                 <img class="card-img-top" src={C1} alt="img"></img>
-                <div class="card-body p-2">
-                <h1 className="card-title ro  heading2  text-left">Flyer design</h1>
+                <div class="card-body">
+                <h1 className="card-title ro   homeheading3  text-left">Flyer design</h1>
                 
                 <div className='d-flex py-2'>
                 <img src={Star} alt=''></img>
@@ -38,8 +51,9 @@ class cources extends Component {
                 <img src={Star} alt=''></img>
                 <p className=" ro card-text pr-1 fw3 p">4.0 (1 reviews)</p>
                 </div>
-               
-                <a href='/courses' className='btn enroll text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.1em 0.9em",backgroundColor:"#5F5F5F",border:'4px solid #5F5F5F',width:"100%",color:"#fff"}}> ENROLL</a>
+                <p className=" ro card-text fw3 small">This course help you imporve your Logo design skills, with this course you get to know all you need in creating a good Logo
+                            </p>
+                <a href='/courses' className='btn glinky text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.3em 0.9em",backgroundColor:" #fff",border:'4px solid #1A9988'}}> ENROLL</a>
 
                 </div>
                 </div>
@@ -49,8 +63,8 @@ class cources extends Component {
                 <div className='col-md-6 col-lg-4 '>
                 <div class="card mb-2 mb-sm-0 mywidth" style={{width: "18rem"}}>
                 <img class="card-img-top" src={C4} style={{width: "100%",height:"10em"}}alt="on"></img>
-                <div class="card-body p-2">
-                <h1 className="card-title ro  heading2  text-left">UI design</h1>
+                <div class="card-body">
+                <h1 className="card-title ro   homeheading3  text-left">UI design</h1>
                 
                 <div className='d-flex py-1'>
                 <img src={Star} alt=''></img>
@@ -59,8 +73,8 @@ class cources extends Component {
                 <img src={Star} alt=''></img>
                 <p className=" ro card-text pr-1 fw3 p">4.5 (4 reviews)</p>
                 </div>
-              
-                <a href='/courses' className='btn enroll text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.1em 0.9em",backgroundColor:"#5F5F5F",border:'4px solid #5F5F5F',width:"100%",color:"#fff"}}> ENROLL</a>
+                <p className=" ro card-text fw3 small">This course help you imporve your Logo design skills, with this course you get to know all you need in creating a good Logo.</p>
+                <a href='/courses' className='btn glinky text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.3em 0.9em",backgroundColor:" #fff",border:'4px solid #1A9988'}}> ENROLL</a>
 
                 </div>
                 </div>
@@ -72,9 +86,9 @@ class cources extends Component {
                  <div className='col-md-6 col-lg-4 '>
                 <div class="card mb-2 mb-sm-0 mywidth" style={{width: "18rem"}}>
                 <img class="card-img-top" src={C2} style={{width: "100%",height:"10em"}}alt="on2"></img>
-                <div class="card-body p-2">
-                <h1 className="card-title ro  heading2  text-left">
-            Photoshop basics</h1>
+                <div class="card-body">
+                <h1 className="card-title ro   homeheading3  text-left">Introduction to 
+            Photoshop</h1>
                 
                 <div className='d-flex py-1'>
                 <img src={Star} alt=''></img>
@@ -83,8 +97,8 @@ class cources extends Component {
                 <img src={Star} alt=''></img>
                 <p className=" ro card-text pr-1 fw3 p">4.5 (5 reviews)</p>
                 </div>
-            
-                <a href='/courses' className='btn enroll text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.1em 0.9em",backgroundColor:"#5F5F5F",border:'4px solid #5F5F5F',width:"100%",color:"#fff"}}> ENROLL</a>
+                <p className=" ro card-text fw3 small">Become familar with photoshop.</p>
+                <a href='/courses' className='btn glinky text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.3em 0.9em",backgroundColor:" #fff",border:'4px solid #1A9988'}}> ENROLL</a>
 
                 </div>
                 </div>
@@ -95,7 +109,7 @@ class cources extends Component {
                 <div class="card mb-2 mb-sm-0 mywidth" style={{width: "18rem"}}>
                 <img class="card-img-top" src={C3} style={{width: "100%",height:"10em"}}alt="on3"></img>
                 <div class="card-body">
-                <h1 className="card-title ro heading2  text-left">Introduction to 
+                <h1 className="card-title ro   homeheading3  text-left">Introduction to 
             Goggle Slides</h1>
                 
                 <div className='d-flex py-1'>
@@ -105,8 +119,8 @@ class cources extends Component {
                 <img src={Star} alt=''></img>
                 <p className=" ro card-text pr-1 fw3 p">4.2 (5 reviews)</p>
                 </div>
-               
-                <a href='/courses1' className='btn enroll text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.1em 0.9em",backgroundColor:"#5F5F5F",border:'4px solid #5F5F5F',width:"100%",color:"#fff"}}> ENROLL</a>
+                <p className=" ro card-text fw3 small">Create you very first slide.</p>
+                <a href='/courses' className='btn glinky text-center ro fw3 p green' style={{borderRadius:"0",padding:"0.3em 0.9em",backgroundColor:" #fff",border:'4px solid #1A9988'}}> ENROLL</a>
 
                 </div>
                 </div>
@@ -130,4 +144,4 @@ class cources extends Component {
         )
     }
 }
-export default cources;
+export default authcources;

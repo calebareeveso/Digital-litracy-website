@@ -53,15 +53,20 @@ function Contact() {
       </div>
       </div>
       <div  className="jumbotron " style={{backgroundColor: "#1A9988",marginBottom:'0'}}>
-            <div className='container pt-5'>
-            <div className='row'>
-            <div className='col-sm-7'>
-            <h5  className=" ru  hero-h fw2  text-left white">Talk to a Mentor</h5>
+        
+
+            <div className='container py-3 pl-md-5 '>
+            <div className='row pl-md-5'>
+            <div className='col-md-7'>
+            <h5  className=" ru pt-sm-5 homeheading2 fw2  text-left white">Talk to a Mentor
+            </h5>
             <p className="fw-3 p ro p pt-sm-0 pb-sm-2  white">Mentors are always available and are<br className="d-none d-sm-block"/> always ready to speak with you. </p>
+            
+
             </div>
-             <div className='col-sm-5  pt-4 pb-5 mb-3'>
-             <button type="button" className="btn btn-outline-light btnwhite whitebtn fw2 px-4 py- ru homeheading1">JOIN
-             <img src={Slack} className=" pl-2" style={{width: "2em"}}alt=''></img>
+             <div className='col-md-5 align-self-center'>
+             <button className="btn btn-outline-light whitebtn btnwhite ru fw2 px-4 py-3">JOIN
+             <img src={Slack} onClick={() => this.navopen()} className=" pl-2 d-none d-md-inline" style={{width:"1.6em"}} alt=''></img>
             </button>
              </div>
             </div>

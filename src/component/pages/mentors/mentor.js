@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../home/styles.css';
+
 import Heroh from '../img/mentorhero.png'
 import Footer from '../../navigation/footer/footer'
 
@@ -8,7 +9,6 @@ import M1 from '../../pages/img/m1.png'
 import M2 from '../../pages/img/m2.png'
 import M4 from '../../pages/img/m4.png'
 import M5 from '../../pages/img/m5.png'
-import M6 from '../../pages/img/m6.png'
 
 import Twitter2 from '../../pages/img/twitter2.svg'
 import Slack from '../../pages/img/slack.svg'
@@ -39,9 +39,9 @@ export default class mentor extends Component {
             <div>
 
               <div class="card carddy text-white position-relative" >
-          <img class="card-img img-fluid" src={Heroh} alt="images" style={{height:'60vh'}}></img>
+          <img class="card-img img-fluid" src={Heroh} alt="images" className="heroh" style={{height:'60vh'}}></img>
           <div class="card-img-overlay" >
-            <div className='container pt-5 d-flex justify-content-center align-items-center ' style={{height:'37vh'}}>
+            <div className='container pt-5 d-flex justify-content-center align-items-center ' style={{height:'80%'}}>
             <h1 className=" ru pl-sm-4 pt-sm-4 hero-h white">MENTORS</h1>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default class mentor extends Component {
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center fh" style={{background: "#1A9988",
 borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -115,7 +115,7 @@ borderRadius: "0px 20px 20px 0px"}}>
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center fh" style={{background: "#1A9988",
 borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -153,7 +153,7 @@ borderRadius: "0px 20px 20px 0px"}}>
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center fh" style={{background: "#1A9988",
         borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -188,7 +188,7 @@ borderRadius: "0px 20px 20px 0px"}}>
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center fh" style={{background: "#1A9988",
         borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -203,36 +203,7 @@ borderRadius: "0px 20px 20px 0px"}}>
 
 
             <div className='col-sm-6 col-md-6 col-lg-4'>
-<div 
-    className="card my-5 small-4"
-    style={{maxWidth: "100%",borderRadius: "15px",height: "20rem",
-    }}
-  >
-    <div className="row no-gutters position-relative" style={{height: "100%"}}>
-      <div className="col-10 col-sm-10 ">
-        <img
-          src={M6}
-          style={{
-            borderTopLeftRadius: "15px",
-            borderBottomLeftRadius: "15px",
-            height: "20rem",
-            borderTopRightRadius: "0",
-            borderBottomRightRadius: "0",
-          }}
-          class="card-img small-4"
-          alt="..."
-        />
-      </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
-        borderRadius: "0px 20px 20px 0px"}}> 
-        <img src={Twitter2} className='sicon m-1' alt=''></img>
-           <img src={Slack} className='sicon m-1' alt=''></img>
-           <img src={Linkedin} className='sicon m-1' alt=''></img>
-      </div>
-                </div>
-            <p className="  ro fw3 p green pt-sm-0 pb-sm-2 text-center">Caleb Areeveso </p>
 
-            </div>
 
             </div>
 
@@ -244,15 +215,20 @@ borderRadius: "0px 20px 20px 0px"}}>
             </div>
             </div>
             <div  className="jumbotron " style={{backgroundColor: "#1A9988",marginBottom:'0'}}>
-            <div className='container pt-5'>
-            <div className='row'>
-            <div className='col-sm-7'>
-            <h5  className=" ru  hero-h fw2  text-left white">Meet The Mentors</h5>
+      
+
+            <div className='container py-3 pl-md-5 '>
+            <div className='row pl-md-5'>
+            <div className='col-md-7'>
+            <h5  className=" ru pt-sm-5 homeheading2 fw2  text-left white">Meet The Mentors
+            </h5>
             <p className="fw-3 p ro p pt-sm-0 pb-sm-2  white">Join Our slack Workspace And get to<br className="d-none d-sm-block"/> know the mentors.</p>
+            
+
             </div>
-             <div className='col-sm-5  pt-4 pb-5 mb-3'>
-             <button type="button" onClick={() => this.navopen()} className="btn btn-outline-light btnwhite whitebtn fw2 px-4 py- ru homeheading1">JOIN
-             <img src={Slack} className=" pl-2" style={{width: "2em"}}alt=''></img>
+             <div className='col-md-5 align-self-center'>
+             <button className="btn btn-outline-light whitebtn btnwhite ru fw2 px-4 py-3">JOIN
+             <img src={Slack} onClick={() => this.navopen()} className=" pl-2 d-none d-md-inline" style={{width:"1.6em"}} alt=''></img>
             </button>
              </div>
             </div>

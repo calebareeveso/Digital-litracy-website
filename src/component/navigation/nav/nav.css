@@ -15,11 +15,15 @@
     margin: 6px 0;
     transition: 0.4s;
   }
+  .noOuline {
+    outline: none!important;
+    border: none!important;
+  }
   .navwidth {
     z-index: 1!important;
   }
    .nlogo {
-     width:6em;
+     width:5em;
    }
    .noOutline:focus,.noOutline:hover {
      outline: none;
@@ -41,7 +45,7 @@
 
   @media(min-width:768px){
     .nlogo {
-      width:7em;
+      width:5em;
     }
   }
   @media(max-width:400px){
@@ -58,13 +62,32 @@
     overflow-x: hidden;
   }
 
+.greendropdown {
+  background: #1A9988!important;
+  border-radius: 7px;
+  color: #fff!important;
+  border: 1px solid #1A9988;
+}
 
+.greendropdown-h:hover,.greendropdown-h:focus {
+   background-color: rgba(26, 153, 136, 0.678);
+   color: #fff;
+}
   /* rigister modal  */
+  .signup {
+    display: none;
+  }
+  .dblock {
+    display: block;
+  }
+  .dnone {
+    display: none;
+  }
   /* The Modal (background) */
 .modal {
   display: none; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 9999; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -76,16 +99,27 @@
 }
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; 
-  border: 1px solid #888;
-  width: 80%; 
-  z-index: 99999!important; 
-  border-radius: 30px!important;
-
-
+@media(min-width:1100px){
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 60%; 
+    z-index: 99999!important; 
+    border-radius: 30px!important;
+  }
 }
+@media(max-width:1100px){
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+    z-index: 99999!important; 
+    border-radius: 30px!important;
+  }
+}
+
 
 /* The Close Button (x) */
 .close {
@@ -132,11 +166,61 @@
 
 
 /* nav link  */
+.nav-plus  {
+  position: absolute;
+  width: 15px;
+  top: 1.3em;
+  height: 2px;
+  background-color: #1A9988;
+  transform: rotate(90deg) translateX(2%);
+  transition: all 0.4s ease-in-out;
+}
+.nav-minus  {
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  bottom: 1.1em;
+  background-color: #1A9988;
+}
+
+.nav-plus-con {
+  position: relative;
+  cursor: pointer;
+}
+.nav-plus-con-m:hover .nav-plus,.nav-plus-con-m:focus .nav-plus {
+  transform: rotate(0) translateX(0);
+}
+
 .link {
   position: relative;
   text-decoration: none!important;
 }
 .link:after, .link:after {
+  bottom: -4px!important;
+  content: ""!important;
+  display: block!important;
+  height: 1px!important;
+  left: 0!important;
+  position: absolute!important;
+  background: #1A9988!important;
+  opacity: 0.6!important;
+  transition: width 0.3s ease 0s, opacity 0.3s ease 0s!important;
+  width: 0!important;
+}
+.link:focus:after, .link:hover:after {
+  width: 100%!important;
+  opacity: 0.9!important;
+}
+.link:hover {
+  color:#1A9988!important;
+
+}
+
+.nav-plus-con-m .link2 {
+  position: relative;
+  text-decoration: none!important;
+}
+.link2:after, .link2:after {
   bottom: -4px!important;
   content: ""!important;
   display: block!important;
@@ -148,8 +232,19 @@
   transition: width 0.3s ease 0s, opacity 0.3s ease 0s!important;
   width: 0!important;
 }
-.link:hover:after, .link:hover:after {
+.nav-plus-con-m:focus .link2:after, .nav-plus-con-m:hover .link2:after {
   width: 100%!important;
   opacity: 0.9!important;
-  color:#1A9988!important;
 }
+.nav-plus-con-m .link2:hover {
+  color:#1A9988!important;
+
+}
+.search {
+  margin-left: 1.2em!important;
+  background: #1A9988;
+  border-radius: 12px;
+  border: none;
+  padding: 0.2em 0.2em 0.2em 0em;
+}
+/* nav links ends  */

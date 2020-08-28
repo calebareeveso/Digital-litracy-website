@@ -68,9 +68,11 @@ class Home extends Component {
             <div className='row'>
                 <div className='col-sm-10 col-md-10 col-lg-6  hero-text'>
                   <h1 className=" ro pl-sm-4 pt-sm-4 hero-h green">DIgital ClassRoom </h1>
-                  <p className="pl-sm-4 p ro hero-p py-sm-3 fw2">The Digital Classroom aims to  rewrite the narrative by teaching students basic digital skills and  also connecting them with  mentors to ensure they thrive,make good career choices and live a purposeful life.
+                  <p className="pl-sm-4  ro hero-p2 py-sm-3 pr-md-4 ">The Digital Classroom aims to  rewrite the narrative by teaching students basic digital skills and  also connecting them with  mentors to ensure they thrive,make good career choices and live a purposeful life.
                   </p>
-                  <a href="/" style={{padding:"0.7em 0.8em",backgroundColor:" #1A9988",borderRadius: "12px"}} class="ro ml-sm-4 white">GET STARTED</a>
+                  <button onClick={() => this.navopen()} style={{backgroundColor:" #1A9988",borderRadius: "12px"}} className="btn  whitebtn btnwhite ro ml-sm-4 white hero-p2 fw2 px-md-4 py-md-3 px-3 py-2">GET STARTED
+            
+            </button>
                 </div>
                 <img className='col-md-2 col-lg-6   d-none d-lg-block' alt='' style={{height: "70vh"}} src={Hero}></img>
              </div>
@@ -82,18 +84,18 @@ class Home extends Component {
       <div className="row">
          <div className="py-5 col-sm-6 col-md-4">
              <img src={Book} alt="" ></img>
-             <h1 className=" ru  pt-4 fw2 heading2 green text-center">COURSES</h1>
-             <h1 className=" ru pt-2 fw2 heading2 black text-center">8+</h1>
+             <h1 className=" ru   fw2 heading2 green text-center">COURSES</h1>
+             <h1 className=" ru  fw2 heading2 black text-center">8+</h1>
         </div>
         <div className="py-5 col-sm-6 col-md-4">
             <img src={Student} alt="" ></img>
-            <h1 className=" ru  pt-4 fw2  heading2 green text-center">IMPACTED STUDENTS</h1>
-            <h1 className=" ru pt-2 fw2  heading2 black text-center">100+</h1>
+            <h1 className=" ru   fw2  heading2 green text-center">IMPACTED STUDENTS</h1>
+            <h1 className=" ru fw2  heading2 black text-center">100+</h1>
         </div>
          <div className="py-5 col-sm-6 col-md-4">
             <img src={Mentor} alt="" ></img>
-            <h1 className=" ru  pt-4 fw2 heading2 green text-center">MENTORS</h1>
-            <h1 className=" ru  pt-2 fw2 heading2 black text-center">10+</h1>
+            <h1 className=" ru   fw2 heading2 green text-center">MENTORS</h1>
+            <h1 className=" ru  fw2 heading2 black text-center">10+</h1>
         </div>
        </div>
       </div>
@@ -103,30 +105,30 @@ class Home extends Component {
 
       {/* why learn with us   */}
         
-       <div className="jumbotron " style={{backgroundColor: "#F4F4F4",marginBottom:'0'}}>
-        <h1 className=" ro pl-sm-5 pt-sm-5 pb-3 homeheading2 fw1 green text-center">Why Learn with DIgital ClassRoom </h1>
+       <div className="jumbotron pb-0" style={{backgroundColor: "#F4F4F4",marginBottom:'0'}}>
+        <h1 className=" ro pl-sm-5 pt-sm-5 pb-3 homeheading3 fw1 green text-center">Why Learn with DIgital ClassRoom </h1>
         <div className="row pt-5">
             <div className="col-md-4 col-sm-6 cardHover">
-               <div className="pt-5">
+               <div className="pt-5 pb-sm-5">
                  <img src={Unlimited} className='pl-4'alt=""></img>
                 <h1 className="pl-4 pt-4 ro   homeheading3 green text-left">Unlimited Courses</h1>
-                <p className="pl-4 ro p pt-sm-0 pb-sm-2  pb">We give student access to free and paid cources. Related to the development of their digital skills.
+                <p className="pl-4 ro p pt-sm-0 pb-sm-2  pb">We give students access to free and paid courses, related to the development of their digital skills.
                 </p>
                </div>
             </div>
-            <div className="col-md-4 col-sm-6 cardHover">
+            <div className="col-md-4 col-sm-6 cardHover pb-sm-5">
                <div className="pt-5">
                  <img src={Collaboration} className='pl-4' alt=""></img>
                 <h1 className=" ro pl-4 pt-3  homeheading3 green text-left">Collaboration</h1>
-                <p className="pl-4 p ro p pt-sm-0 pb-sm-2 pb">We don’t just give resouces and teach student but also show you the importances of collaborating with people.
+                <p className="pl-4 p ro p pt-sm-0 pb-sm-2 pb">We don’t just give resouces and teach student but also show you the importance of collaborating with people.
                 </p>
                </div>
             </div>
-            <div className="col-md-4 col-sm-6 cardHover">
+            <div className="col-md-4 col-sm-6 cardHover pb-sm-5">
                 <div className="pt-5">
                   <img src={DedicatedMentor} className='pl-4' alt=""></img>
                 <h1 className=" ro pl-4 pt-4 homeheading3 green text-left">Dedicated Mentors</h1>
-                <p className="pl-4 p ro p pt-sm-0 pb-sm-2 ">We have mentors here who are will to take their time to teach  share their knowlege, guide and imporve your skills.
+                <p className="pl-4 p ro p pt-sm-0 pb-sm-2 pb">We have mentors here who are willing to take their time to teach, guide and share their knowledge, to help imporve your skills.
                 </p>
             </div>
            </div>
@@ -150,7 +152,7 @@ class Home extends Component {
       <div class="card  cards text-white">
           <img class="card-img " src={s1} alt="images"></img>
           <div class="card-img-overlay">
-            <h5  className=" ru pt-sm-5 homeheading3 fw2  text-left card-title">BECOME FAMILIAR WITH TECHNOLOGY</h5>
+            <h5  className=" ru pt-sm-5 homeheading3 fw2  text-left card-title">BECOME FAMILIAR WITH <br className='d-none d-sm-block'></br> TECHNOLOGY</h5>
             <p className=" card-text p ro fw3 p pt-sm-0 pb-sm-2 ">We offer the best courses to help you become proficient with everyday technologies
             </p>
             <button type="button" className="btn btn-outline-light whitebtn">VIEW COURSES</button>
@@ -175,7 +177,7 @@ class Home extends Component {
 
 
     <div  className="jumbotron " style={{backgroundColor: "#fff"}}>
-     <h1 className=" ro pl-sm-5 pt-sm-5 pb-5 homeheading2 fw1 green text-center">Explore featured courses</h1>
+     <h1 className=" ro pl-sm-5 pt-sm-5 pb-5 homeheading3 fw1 green text-center">Explore courses</h1>
        <div className='container pt-3'>
        <div className='row'>
        {/* col 1 */}
@@ -255,17 +257,18 @@ Goggle Slides</h1>
     
     {/* join slack */}
     <div  className="jumbotron " style={{backgroundColor: "#1A9988",marginBottom:'0'}}>
-    <div className='container pt-5'>
-            <div className='row'>
-            <div className='col-sm-1'></div>
-            <div className='col-sm-6'>
-            <h5  className=" ru  homeheading2 fw2  text-left white">Join Our Slack Workspace</h5>
+            <div className='container py-3 pl-md-5 '>
+            <div className='row pl-md-5'>
+            <div className='col-md-7'>
+            <h5  className=" ru pt-sm-5 homeheading2 fw2  text-left white">Join Our Slack Workspace
+            </h5>
             <p className="fw-3 p ro p pt-sm-0 pb-sm-2  white">Introduce Your self in the introduction channel get to know your Mentors and <sstrong>
               Let's help you start you Journey.</sstrong>.</p>
+
             </div>
-             <div className='col-sm-5  pt-4 pb-5 mb-3'>
-             <button onClick={() => this.navopen()} type="button" className="btn btn-outline-light btnwhite whitebtn fw2 px-4 py- ru homeheading1">JOIN
-             <img src={Slack} className=" pl-2" style={{width: "2em"}}alt=''></img>
+             <div className='col-md-5 align-self-center'>
+             <button className="btn btn-outline-light whitebtn btnwhite ru fw2 px-4 py-3">JOIN
+             <img src={Slack} onClick={() => this.navopen()} className=" pl-2 d-none d-md-inline" style={{width:"1.6em"}} alt=''></img>
             </button>
              </div>
             </div>
@@ -277,7 +280,7 @@ Goggle Slides</h1>
 
 
      <div  className="jumbotron " style={{backgroundColor: "#fff",marginBottom:'0'}}>
-     <h1 className=" ro pl-sm-5  pb-3 homeheading2 fw1 green text-center">Dedicated Mentors</h1>
+     <h1 className=" ro pl-sm-5  pb-3 homeheading3 fw1 green text-center">Dedicated Mentors</h1>
        
 
 {/* card 1 */}
@@ -305,7 +308,7 @@ Goggle Slides</h1>
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2 fh card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
 borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -344,7 +347,7 @@ borderRadius: "0px 20px 20px 0px"}}>
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center fh" style={{background: "#1A9988",
 borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -381,7 +384,7 @@ borderRadius: "0px 20px 20px 0px"}}>
           alt="..."
         />
       </div>
-      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center" style={{background: "#1A9988",
+      <div class="col-2 col-sm-2  card-body d-flex flex-column justify-content-center align-items-center fh" style={{background: "#1A9988",
 borderRadius: "0px 20px 20px 0px"}}> 
         <img src={Twitter2} className='sicon m-1' alt=''></img>
            <img src={Slack} className='sicon m-1' alt=''></img>
@@ -418,7 +421,7 @@ borderRadius: "0px 20px 20px 0px"}}>
             </div>
              <div className='col-sm-5 align-self-center'>
              <a href='/contact' className="btn btn-outline-light whitebtn btnwhite fw2 px-4 py-3">PARTNER
-             <img src={Heart} className=" pl-2 d-none d-md-inline" alt=''></img>
+             <img src={Heart} className=" pl-2 d-none d-md-inline" style={{width:"1.6em"}} alt=''></img>
             </a>
              </div>
             </div>
@@ -427,14 +430,7 @@ borderRadius: "0px 20px 20px 0px"}}>
         </div>
 
 
-    <div className="jumbotron " style={{backgroundColor: "#fff",marginBottom:'0'}}>
-       <div className='container'>
-       <h1 className=" ro pl-sm-5 pt-sm-5 pt-3 homeheading2 fw1 green text-center pb-4">Subscribe to our News <br/>Letter </h1>
-        <input className="form-control form-control-lg mb-sm-5 mb-3" style={{padding:"0.7em 0.8em",backgroundColor:" #fff",borderRadius: "12px",border:'4px solid #1A9988',height:"12vh"}} type="text" placeholder="exapmle@gmail.com"></input>
-       </div>
-
-        </div>
-      
+   
      
 
      

@@ -37,6 +37,7 @@ nav ul li a {
     display: block;
     font-weight: 500;
     padding-bottom: 0.3em;
+    line-height: 1em;
 }
 .pf2 {
     font-size: 16px;
@@ -70,7 +71,7 @@ nav ul li a {
     font-size: 4em;
 }
 .hero-p {
-    font-size: 1.8em;
+    font-size: 27px;
     line-height: 1.3em;
     font-weight: 700;
 }
@@ -97,4 +98,51 @@ nav ul li a {
     .heading2 {
         font-size: 1.5em;
     }
+}
+.f-ul li {
+    list-style-type: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 163.19%;
+}
+
+.f-l {
+    position: relative!important;
+    cursor: pointer;
+  }
+  .f-l:after, .f-l:after {
+    bottom: 0px!important;
+    content: ""!important;
+    display: block!important;
+    height: 2px!important;
+    left: 0!important;
+    position: absolute!important;
+    background: #1A9988!important;
+    transition: width 0.3s ease 0s, opacity 0.3s ease 0s!important;
+    width: 20%!important;
+  }
+  .f-l:focus:after, .f-l:hover:after {
+    width: 70%!important;
+  }
+
+
+
+
+.f-link {
+    color: #1A9988!important;
+    transition: all 0.3s ease-in-out;
+}
+.f-link:hover {
+    color: #464646!important;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+.footerbg {
+    background: url(../../pages/img/footerbg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

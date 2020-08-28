@@ -2,9 +2,14 @@ import React from 'react'
 import {
      Link
   } from "react-router-dom";
-  import { Navbar,Nav } from 'react-bootstrap'
+  import fire from '../../../config/fire'
+  import { Navbar,Nav ,Dropdown} from 'react-bootstrap'
   import './nav.css'
+  import Search from "../../pages/img/search.svg";
 import Logo from '../../pages/img/logo.png'
+//login
+import Login from '../../pages/login/Login'
+
 class BootstrapNavbar extends React.Component{
     componentDidMount(){
         var modal = document.getElementById('id01');
@@ -17,29 +22,69 @@ class BootstrapNavbar extends React.Component{
         }
 
     }
-     navopen(){
-       document.getElementById('id01').style.display='block'
-     }
-     navclose(){
-        document.getElementById('id01').style.display='none'
+
+    navopen(){
+        document.getElementById('id01').style.display='block'
       }
-      myFunctionNav() {
-        const x = document.querySelector(".containerNav")
-        x.classList.toggle("change");
-        console.log('hi')
+      navclose(){
+         document.getElementById('id01').style.display='none'
+       }
+       myFunctionNav() {
+         const x = document.querySelector(".containerNav")
+         x.classList.toggle("change");
+         console.log('hi')
+       }
+      
+
+
+
+    switchSignup(){
+
+        document.getElementById('id01').style.display='block';
+
+        const signup = document.querySelectorAll(".signup")
+      var i;
+      for (i = 0; i < signup.length; i++) {
+          signup[i].classList.toggle('dblock')
+        }
+        const login = document.querySelectorAll(".login")
+      for (i = 0; i < login.length; i++) {
+          login[i].classList.toggle('dnone')
+        }
+
+    }
+
+    switchLogin(){
+      const signup = document.querySelectorAll(".signup")
+    var i;
+    for (i = 0; i < signup.length; i++) {
+        signup[i].classList.remove('dblock')
       }
-     
+      const login = document.querySelectorAll(".login")
+    for (i = 0; i < login.length; i++) {
+        login[i].classList.remove('dnone')
+      }
+
+      document.getElementById('id01').style.display='block';
+   
+  }
+  logout() {
+    fire.auth().signOut();
+}
+
+    
     render(){
-        const GreenButton = {padding:"0.5em 0.8em",backgroundColor: "#1A9988",borderRadius: "12px",textAlign:"center",color:'#fff'}
         return(
             <div className='xHidden'>
                 <div className="row">
                     <div className="col-md-12">
                         
 
-                            <Navbar  expand="md" sticky="top" className='navwidth' style={{backgrounColor: "#ffffff"}}>
-                                <Navbar.Brand href="/" className='noOutline'><img src={Logo} alt='' className="nlogo"></img></Navbar.Brand>
-                                <Navbar.Toggle aria-controls="basic-navbar-nav" >  
+                            <Navbar  expand="lg" sticky="top" className='navwidth' style={{backgrounColor: "#ffffff"}}>
+                            <Link to='/' >
+                                <Navbar.Brand  className='noOutline'><img src={Logo} alt='' className="nlogo"></img></Navbar.Brand>
+                            </Link>
+                                <Navbar.Toggle aria-controls="basic-navbar-nav" className='noOuline'>  
                                 <div className="containerNav"  onClick={() => this.myFunctionNav()}>
                                 <div className="bar1"></div>
                                 <div className="bar2"></div>
@@ -47,20 +92,51 @@ class BootstrapNavbar extends React.Component{
                                 </div>
                                 </Navbar.Toggle>
                                 <Navbar.Collapse id="basic-navbar-nav">
-                                    <Nav className="ml-auto">
+                                <Nav className="nav-plus-con-m ml-auto"> 
+                                    <Nav.Link className=" d-none d-lg-block"><span> <Link to='/courses' className='green ro link2 '>COURSES</Link></span></Nav.Link>
+                                     <div className='nav-plus-con d-none d-lg-block'>
+                                         <div  className='nav-plus'></div>
+                                         <div className='nav-minus'></div>
+                                     </div>
+                                     <br></br>
+                                    
+                                </Nav>
+                                    <Nav className="pl-lg-4" >
                                    
-                                    <Nav.Link  ><span > <Link to='/' className='green ro link'>Home</Link></span></Nav.Link>
-                                    <Nav.Link ><span> <Link to='/courses' className='green ro link'>Courses</Link></span></Nav.Link>
-                                    <Nav.Link ><span ><Link to='/mentors' className='green ro link'>Mentors</Link></span></Nav.Link>
-                                    <Nav.Link ><span ><Link to='/contact' className='green ro link'>Contact Us</Link></span></Nav.Link>
-                                    <Nav.Link href="#" style={GreenButton}><span className="ro" onClick={() => this.navopen()}>JOIN THE CLASSROOM</span></Nav.Link>
+                                    <Nav.Link className=" d-block d-lg-none"><span> <Link to='/courses' className='green ro link '>COURSES</Link></span></Nav.Link>
+                                    
+                                    <Nav.Link ><span ><Link to='/mentors' className='green ro link'>MENTORS</Link></span></Nav.Link>
+                                    <Nav.Link  ><span > <Link to='/contact' className='green ro link'>CONTACT</Link></span></Nav.Link>
+                                    <Nav.Link  className='pr-2 d-none d-lg-block'><img src={Search} alt=''></img></Nav.Link>
+                                    
+                                    {/* <Nav.Link href="#" ><span  onClick={() => this.navopen()}></span></Nav.Link> */}
 
                                    
+ 
+                                   
+
+                               
+                                   
+                                   <Dropdown>
+                                   <Dropdown.Toggle  className="ro greendropdown text-white" id="dropdown-basic">
+                                   JOIN THE CLASSROOM
+                                   </Dropdown.Toggle>
+
+                                   <Dropdown.Menu>
+                                       <Dropdown.Item   className=" greendropdown-h green" onClick={this.switchSignup}>REGISTER</Dropdown.Item>
+                                       <Dropdown.Item  className=" greendropdown-h green" onClick={this.switchLogin} >LOGIN</Dropdown.Item>
+                                       <Dropdown.Item   className=" greendropdown-h green" onClick={this.logout}>Logout</Dropdown.Item>
+                                       
+                                   </Dropdown.Menu>
+                                 
+                                   {/* <Dropdown.Item as="button">Another action</Dropdown.Item>
+                                   <Dropdown.Item as="button">Something else</Dropdown.Item> */}
+                                  </Dropdown>
+
+
+
                                     </Nav>
-                                    {/* <Form inline>
-                                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                    <Button variant="outline-success">Search</Button>
-                                    </Form> */}
+                                  
                                 </Navbar.Collapse>
                             </Navbar>
                             <br />
@@ -73,32 +149,10 @@ class BootstrapNavbar extends React.Component{
 
                 <div id="id01" class="modal">
   
-                <form class="modal-content animate jumbotron" action="/action_page.php" method="post">
+                <form class="modal-content animate jumbotron" >
                     <span onClick={() => this.navclose()} class="close" title="Close Modal">&times;</span>
 
-                   <div className='container'>
-                       
-                   <div className='px-md-5 mx-md-5'>
-                   <h1 className=" ro pl-sm-5  pb-5 hero-h fw1 green text-center">Register </h1>
-                   <p className="pl-4 ro small pt-sm-0  fw2 green ">
-                </p>
-                    <input className="form-control form-control-lg " style={{padding:"0.7em 0.8em",backgroundColor:" #fff",borderRadius: "12px",border:'4px solid #1A9988',height:"10vh"}} type="text" placeholder="Name"></input>
-                    <br></br>
-                    <input className="form-control form-control-lg " style={{padding:"0.7em 0.8em",backgroundColor:" #fff",borderRadius: "12px",border:'4px solid #1A9988',height:"10vh"}} type="text" placeholder="School"></input>
-                    <br></br>
-                    <input className="form-control form-control-lg " style={{padding:"0.7em 0.8em",backgroundColor:" #fff",borderRadius: "12px",border:'4px solid #1A9988',height:"10vh"}} type="email" placeholder="Email"></input>
-                    <br></br>
-                    <div class="d-flex justify-content-between pb-4" role="group" aria-label="Basic example">
-
-                    <button href='/mentors' className='btn glinky text-center ro fw3 
-                      hero-p green' style={{padding:"0.3em 1em",backgroundColor:" #fff",border:'4px solid #1A9988'}}> SEND</button>
-                    <button type="button" style={{padding:"0.3em 1em",border:'4px solid #cf2121'}} onClick={() => this.navclose()} className="hero-p cancelbtn rounded-0 btn btn-outline-danger">Cancel</button>
-                     
-                    </div>
-                    
-
-                   </div>
-                   </div>
+                    <Login/>
                  
                    
                   </form>

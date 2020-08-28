@@ -64,11 +64,21 @@ nav ul li a {
 }
 .fw3 {
     font-weight: 500;
+    z-index: 99!important;
+}
+@media(max-width:768px){
+    .fw3 {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(196, 196, 196, 0.46) 0%, rgba(196, 196, 196, 0) 100%);
+    }
 }
 .whitebtn {
     border-width: 2px;
     border-radius: 0px;
-    font-size: 30px
+    font-size: 2em;
+}
+
+.whitebtn2 {
+    font-size: 2em;
 }
 .bo-g {
     border: 4px solid #1A9988;
@@ -86,10 +96,30 @@ nav ul li a {
 .hero-h {
     font-size: 4em;
 }
+.hero-h2 {
+    font-size: 3em;
+}
 .hero-p {
-    font-size: 1.8em;
+    font-size: 27px;
     line-height: 1.3em;
     font-weight: 500;
+}
+
+
+.hero-p2 {
+    font-size: 24px;
+    line-height: 1.3em;
+    font-weight: 500!important;
+}
+.cardHover  {
+    cursor: pointer;
+}
+.enroll {
+    transition: all 0.3s ease-in-out;
+    margin-top: 1em;
+}
+.enroll:hover {
+    background:rgba(95, 95, 95, 0.658);
 }
 .cardHover:hover {
   background-color: #fff!important;
@@ -108,7 +138,13 @@ nav ul li a {
     .hero-h {
         font-size: 2.5em;
     }
+    .hero-h2 {
+        font-size: 2em;
+    }
     .hero-p {
+        font-size: 1em;
+    }
+    .hero-p2 {
         font-size: 1em;
     }
     p {
@@ -133,7 +169,13 @@ nav ul li a {
     .hero-h {
         font-size: 3.3em;
     }
+    .hero-h2 {
+        font-size: 2.8em;
+    }
     .hero-p {
+        font-size: 1.4em;
+    }
+    .hero-p2 {
         font-size: 1.4em;
     }
     p {
@@ -150,7 +192,13 @@ nav ul li a {
     .hero-h {
         font-size: 2.5em;
     }
+    .hero-h2 {
+        font-size: 2em;
+    }
     .hero-p {
+        font-size: 1.1em;
+    }
+    .hero-p2 {
         font-size: 1.1em;
     }
     p {
@@ -198,3 +246,46 @@ nav ul li a {
 
 
   /* scrool bar ends  */
+
+  @media(max-width:480px){
+    .heroh {
+        height: 40vh!important;
+    }
+}
+.search::placeholder {
+    color: #fff;
+}
+.search input[type=text] 
+{
+    
+    background: #1A9988;
+    border: none!important;
+    color: #fff;
+}
+.search {
+    color: #fff!important;
+    outline: none!important;
+}
+
+.search input[type=text]:focus,.search input[type=text]:hover
+{
+    outline: none!important;
+    border: none!important;
+}
+.searchbg {
+    background: #1A9988;
+    border-radius: 12px;
+}
+.fh {
+    height: 20em!important;
+    border-top-right-radius: 12px!important;
+    border-bottom-right-radius: 12px!important;
+
+}
+.c1 {
+    background: url(../../pages/img/c1main.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
