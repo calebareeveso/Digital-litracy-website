@@ -36,7 +36,7 @@ class AuthCourses extends Component {
       </div>
       <div class="col-6 col-sm-6  card-body text-left fh" > 
       <h1 className=''>Introduction to Goggle Slides</h1>
-                   <p className='p text-muted'>A courses  that help you become good with ggogle slides</p>
+                   <p className='p text-muted'>A courses  that help you become good with google slides</p>
 
                    <div>
                       {localStorage.getItem("c1grades") !== '100' ?    

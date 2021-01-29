@@ -116,6 +116,8 @@ class cources extends Component {
                
                 </div>
                 </div>
+
+                
                 <div  className="jumbotron " style={{backgroundColor: "#1A9988",marginBottom:'0'}}>
                 <div className='container '>
            
