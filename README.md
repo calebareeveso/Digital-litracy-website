@@ -1,4 +1,4 @@
-<a href="https://ibb.co/BZnJwcW"><img src="https://i.ibb.co/xjFb3X9/digital-classroom.png" alt="digital-classroom" border="0"></a>
+<a href="https://ibb.co/BZnJwcW"><img src="https://i.ibb.co/xjFb3X9/digital-classroom.png" width="100%" alt="digital-classroom" border="0"></a>
 # DIgital ClassRoom - overview
 A little project for my sis 😅 [KLCI](http://klci.com.ng/index.php) Training
 
